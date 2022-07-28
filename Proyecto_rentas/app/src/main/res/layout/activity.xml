@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.example.proyecto_rentas.viewmodel.LoginViewModel"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".view.Activity">
+
+        <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <EditText
+                    android:id="@+id/edt_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:addTextChangedListener="@{viewModel.emailTextWatcher}"/>
+
+            <EditText
+                    android:id="@+id/edt_password"
+                    android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:addTextChangedListener="@{viewModel.passwordTextWatcher}"/>
+
+        </LinearLayout>
+        <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/btn_login"
+                android:text="login"
+                android:layout_alignParentBottom="true"
+                android:onClick="@{viewModel::onLoginClicked}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</layout>

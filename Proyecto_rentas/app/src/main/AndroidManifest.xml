@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.proyecto_rentas">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Proyecto_rentas"
+        tools:targetApi="31">
+        <activity
+            android:name=".view.ArrendarFin"
+            android:exported="false"
+            android:parentActivityName=".view.ArrendarPago" />
+        <activity
+            android:name=".view.ArrendarPago"
+            android:exported="false"
+            android:parentActivityName=".view.Arrendar2" />
+        <activity
+            android:name=".view.Arrendar2"
+            android:exported="false"
+            android:parentActivityName=".view.Arrendar" />
+        <activity
+            android:name=".view.Arrendar"
+            android:exported="false" />
+        <activity
+            android:name=".view.vistaCasa"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa1"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa2"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa3"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa4"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa5"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa6"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.vistaCasa7"
+            android:exported="false"
+            android:parentActivityName=".view.Search" />
+        <activity
+            android:name=".view.Search"
+            android:exported="false"
+            android:parentActivityName=".view.vistaCasa" />
+        <activity
+            android:name=".view.FormRegister"
+            android:exported="false"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
